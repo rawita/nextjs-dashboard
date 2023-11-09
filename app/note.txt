@@ -1,0 +1,56 @@
+sync ไบรท์สั่งงาน แล้วต้องรอว่างานเสร็จยัง
+async ไบรท์สั่งงาน ไม่รอว่ารับว่า เสร็จยัง 
+await บอกว่า รองานเสร็จก่อน 
+
+
+"use client"
+-เป็นคำสั่งที่บอกว่า ไป Run อยู่ฝั่ง client นะ
+เนื่องจากปกติแล้วโค๊ดที่เราเขียนมันจะ Run อยู่ฝั่ง Server จะเห็นจาก Termonal ด้านล่าง
+ถ้าเรา เขียนโค๊ด บน Server เมื่อเรา Console.log มันจะขึ้นที่ Termonal ด้านล่าง
+แต่ถ้า ในใส่ "use client" Console.log จะไปขึ้นที่ แท็บ Console
+- พวกตระกูล useState , useEffect useอื่นๆ และพวก onClick ,onChange
+
+** Next V.13 UP ** 
+
+            1                   2                   3
+        ---------->         --------->          ---------> 
+Client              Server              Django              Database
+        <----------         <---------          <---------        
+            6                   5                   4
+
+
+- รูปแแบ Nextv.13 up จะเป็นรูปแแบบที่ Return ค่ากลับมาทั้ง Html และ JavaScript
+- เมื่อมีคนเข้า Web แล้วกด Entet จาก Client จะยิงไปหา Server
+- เราเขียนโค๊ดบน Server เพื่อยิง ReaQuest ไปขอข้อมูลที่ Django 
+
+What is Static Rendering?
+Static คือ เข้ามาใช้ไฟล์เดิม ใช้ข้อมูลชุดเดิมที่เหมือนกัน ส่งกลับไปที่ Client (ที่ใครๆเข้ามาแล้วต้องเห็นข้อมูลชุดนี้เหมือนกัน)
+- Next จะทำให้เป็นแบบ Static
+
+What is Dynamic Rendering?
+Dynamic คือ ต้องการข้อมูลล่าสุดตลอดเวลา เช่นข้อมูล Scan นิ้ว 
+
+
+จะใช้ useSearchParams หรือ searchParams
+
+ 
+use-debounce
+import { useDebouncedCallback } from 'use-debounce';
+เนื่องจากเวลาเรากดค้นหามันจะยิงตลอด เราเลยต้องใช้ use-debounce
+Searching... E
+Searching... Em
+Searching... Emi
+Searching... Emil
+
+
+
+client Component จะไม่สามารถมี Component Server ได้
+
+'use server';
+เป็นการบอกว่า function นี้จะถูก Run ที่ฝั่ง Server เท่านั้น และยอมให้เรียกจาก Client Component ได้
+- form submit ให้ใช้ Use server
+
+ไดนามิก [อะไรก็ได้] มันจะไปปรากฎอยู่บน URL เช่น
+การสร้างไฟล์ [id]
+            |---> edit
+                |---> page
