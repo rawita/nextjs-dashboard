@@ -54,3 +54,12 @@ client Component จะไม่สามารถมี Component Server ได
 การสร้างไฟล์ [id]
             |---> edit
                 |---> page
+
+
+
+Zod ในการทำ Data Validation
+
+
+
+ลง next-auth
+ัyarn add next-auth@latest

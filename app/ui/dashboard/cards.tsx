@@ -15,7 +15,7 @@ const iconMap = {
 import { fetchCardData } from "@/app/lib/data";
 
 export default async function CardWrapper() {
-  const { numberOfCustomers, numberOfInvoices, totalPaidInvoices, totalPendingInvoices } =
+  const { numberOfInvoices, numberOfCustomers, totalPaidInvoices, totalPendingInvoices } =
     await fetchCardData();
   return (
     <>
