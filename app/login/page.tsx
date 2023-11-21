@@ -1,5 +1,8 @@
 import AcmeLogo from "@/app/ui/acme-logo";
 import LoginForm from "@/app/ui/login-form";
+// https://nextjs.org/learn/dashboard-app/adding-authentication
+// Email: user@nextmail.com
+// Password: 123456
 
 export default function LoginPage() {
   return (
